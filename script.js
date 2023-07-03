@@ -115,7 +115,7 @@ if(((((((document.f_calculadora.f_valor.value).replace(",",".")).trim()==="") ||
      j_juros=parseFloat(j_valorfuturo-j_valor);
    
     /*Calcular Rentabilidade total */
-    j_rentabilidade=parseFloat((j_juros*100)/j_valor);
+    j_rentabilidade=parseFloat((j_juros*100)/j_valorfuturo);
     
     /*Span f_valorfuturo recebe variável j_valorfuturo*/
     document.getElementById("f_valorfuturo").textContent=j_valorfuturo.toFixed(2);
