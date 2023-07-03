@@ -24,7 +24,12 @@ padding: 10px;
 background-color:rgb(143, 214, 255) ;
 border: solid black 3px;
 }
-
+#f_ipca{
+    width: 50px;
+}
+#f_selic{
+    width: 50px;
+}
 .botoes{
     padding: 15px;
     background-image:linear-gradient(#fff,rgb(2, 77, 121));
