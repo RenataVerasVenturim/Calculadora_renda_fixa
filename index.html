@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de rentabilidade de renda fixa">
+    <title>Investimentos</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="box1">
+        Calculadora de renda fixa 
+        <br>PRÉ-FIXADO
+    </h1>
+
+    <form method="post" id="f_calculadora" name="f_calculadora">
+        <div id="box2">
+            <p>
+                <label for="f_valor">Valor a investir (R$): </label><input type="number" id="f_valor" name="f_valor" placeholder="Ex:100,00"> 
+            </p>
+            <p>
+                <label for="f_selic">Selic atual (%): </label><input type="number" id="f_selic" name="f_selic" placeholder="Digite aqui" value="13.75">                
+            <a href=" https://br.investing.com/economic-calendar/brazilian-interest-rate-decision-415">(Consultar)</a>
+            </p>
+            <p>
+                <label for="f_ipca">IPCA acumulado 12 meses (%):</label><input type="number" id="f_ipca" name="f_ipca" placeholder="Digite aqui" value="3.94">     
+                <a href="https://www.idinheiro.com.br/tabelas/tabela-ipca/">(Consultar)</a>               
+            </p>
+        </div>
+
+        <div id="box3">
+            <p>
+                Tipo de rentabilidade: 
+                <select id="f_tipo_de_rentabilidade" name="f_tipo_de_rentabilidade">
+                    <option value="PRÉ-FIXADO" id="f_prefixado_fixo">PRÉ-FIXADO</option>
+                <!-- <option value="PÓS-FIXADO CDI">PÓS-FIXADO CDI</option>
+                    <option value="PÓS-FIXADO IPCA">PÓS-FIXADO IPCA</option>
+                 //-->
+                </select>
+            </p>
+            <p>
+                Ativo: 
+                <select id="f_isentoounao">
+                    <option value="isento">Isentos de IR (Ex: LCA, LCI, Debênture incentivada,...)</option>
+                    <option value="com ir">com IR ( CDB, RDB, NU CONTA,...)</option>
+                </select>
+            </p>
+            <p>
+                <label for="f_taxa">taxa anual (%):</label>
+                <input type="number" id="f_taxa" name="f_taxa" placeholder="Ex:10"> 
+            </p>
+            <p>
+                <label for="f_tempo">Tempo de aplicação (meses):</label>
+                <input type="number" id="f_tempo" name="f_tempo" placeholder="Digite aqui"> 
+                
+            </p>
+        </div>
+
+        <div id="f_botoes">
+        <input class="botoes" type="button" value="Calcular" onclick="calcular_rentabilidade()">
+        <input class="botoes" type="reset" value="Limpar">
+        </div>
+
+        <div id="resultados">
+            <p>CDI atual:<span id="f_cdi"></span>%</p>
+            <p>IPCA mês:<span id="f_ipcames"></span>%</p>
+            <p>Juros (R$):<span id="f_juros"></span> </p>
+            <p>Valor futuro (R$):<span id="f_valorfuturo"></span> </p>
+            <p>IR alíquota:<span id="f_aliquota_ir"></span>%</p>
+            <p>IR (R$):<span id="f_ir"></span></p>
+            <p class="destaque">Valor futuro líquido: R$<span id="f_vfl"></span> </p>
+            <p class="destaque">Rentabilidade líquida: R$<span id="f_rentabilidade"></span></p>
+            
+        </div>
+    </form>
+
+
+
+        <div id="creditos">
+            COPYRIGHT © @2023 Renata Veras Venturim , ALL RIGHTS RESERVED
+        </div>
+
+
+<script src="script.js">
+</script>
+
+</body>
+
+</html>
